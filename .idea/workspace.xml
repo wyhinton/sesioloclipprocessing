@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="befd4861-15a2-4c02-9f4e-2efbed440b5d" name="Default Changelist" comment="" />
+    <list default="true" id="befd4861-15a2-4c02-9f4e-2efbed440b5d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/TESTS/Bach Mov 5 v2_[C, ST, T]_[1,2,500]_[1,3,500] [2021-09-26 124544].wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACH_MOV_1/Bach Mov 1 v2_[C,T,LT]_[1,121,162]_[1,24,224] [2021-09-24 222333].wav" beforeDir="false" afterPath="$PROJECT_DIR$/BACH_MOV_1/Bach Mov 1 v2_[C,T,LT]_[1,12,162]_[1,24,224] [2021-09-24 222333].wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACH_MOV_1/Bach Mov 1 v2_[LT, MR, T]_[1,29,224]_[1,30,224} [2021-09-24 222333].wav" beforeDir="false" afterPath="$PROJECT_DIR$/BACH_MOV_1/Bach Mov 1 v2_[LT, MR, T]_[1,29,224]_[1,30,224] [2021-09-24 222333].wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROCESS_CLIPS.py" beforeDir="false" afterPath="$PROJECT_DIR$/PROCESS_CLIPS.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out_csv.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out_csv.csv" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,11 +26,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1yc15Hsap3QTSygZjkkTknv1Sd3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/TESTS" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/TESTS" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/BACH_MOV_1" />
       <recent name="$PROJECT_DIR$/BACH_MOV_2" />
@@ -82,5 +93,16 @@
       <updated>1632535877630</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
