@@ -53,13 +53,10 @@ def process_file(path: str):
     if len(splits) != 4:
         raise ValueError('{} did not have 4 splits.'.format(path))
     # ic(path)
-<<<<<<< HEAD
     name = splits[0]
-=======
     # 'Bach Mov 1 v2_[T, LR, FL, UL]_[1,31,365]_[1,32,818] [2021-09-24 222333].wav'
     name = standardize_names(splits[0])
 
->>>>>>> c964f210ae0c59ef06a38fe90a7fbaaac45126e7
     tags = splits[1]
     tags = find_between(tags, "[", "]")
     start = bpm_to_seconds(splits[2], BPM)
