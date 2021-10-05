@@ -14,7 +14,7 @@ def main():
             dfarray.append(df)
         else:
             continue
-    df = pd.DataFrame(dfarray, columns = ["name", "length", "start", "end", "tags", "date", "path"])
+    df = pd.DataFrame(dfarray, columns = ["name", "length", "start", "end", "tags", "date", "filename"])
     df.to_csv("out_csv.csv")
     print(df)
 
