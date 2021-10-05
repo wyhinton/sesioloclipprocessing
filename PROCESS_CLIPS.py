@@ -14,7 +14,7 @@ def main():
             dfarray.append(df)
         else:
             continue
-    df = pd.DataFrame(dfarray, columns = ["name", "length", "start", "end", "tags", "date", "path"])
+    df = pd.DataFrame(dfarray, columns = ["name", "length", "start", "end", "tags", "date", "filename"])
     df.to_csv("out_csv.csv")
     print(df)
 
@@ -45,7 +45,6 @@ def process_file(path: str):
     if len(splits) != 4:
         raise ValueError('{} did not have 4 splits.'.format(path))
     # ic(path)
-    # 'Bach Mov 1 v2_[T, LR, FL, UL]_[1,31,365]_[1,32,818] [2021-09-24 222333].wav'
     name = splits[0]
     tags = splits[1]
     tags = find_between(tags, "[", "]")
