@@ -7,7 +7,8 @@ import re
 pd.set_option('display.max_columns', None)
 BPM = 120
 CLIP_DIRECTORY = "BACH_MOV_1"
-
+CLIP_PROCESSING_OUTPUT = "out_csv.csv"
+CLIPS_SUMMARY_OUTPUT = "clips_summary.csv"
 
 def standardize_names(source_name)->str:
     return source_name.replace(" v2", "").upper()
@@ -23,10 +24,27 @@ def main():
         else:
             continue
     df = pd.DataFrame(dfarray, columns = ["name", "length", "start", "end", "tags", "date", "filename"])
-    df.to_csv("out_csv.csv")
+    df.to_csv(CLIP_PROCESSING_OUTPUT)
+    
+    summary_frame = create_summary_frame(df)
+    summary_frame.to_csv(CLIPS_SUMMARY_OUTPUT)
+    # counts = df['name'].value_counts()
+    # count_frame = pd.DataFrame(counts)
+    # 
+    # count_frame.to_csv(CLIPS_SUMMARY_OUTPUT)
+
     print(df)
 
-def bpm_to_seconds(time: str, bpm: int):
+
+def create_summary_frame(main_frame):
+    counts = main_frame['name'].value_counts()
+    count_frame = pd.DataFrame(counts)
+    count_frame = count_frame.reset_index()
+    count_frame.columns = ['unique_values', 'counts']
+    return count_frame
+
+
+def bpm_to_seconds(time: str):
     #1,32,818
     time = time.replace("[", "").replace("]","")
     split = time.split(",")
@@ -59,11 +77,11 @@ def process_file(path: str):
 
     tags = splits[1]
     tags = find_between(tags, "[", "]")
-    start = bpm_to_seconds(splits[2], BPM)
+    start = bpm_to_seconds(splits[2])
     third_splits = splits[3].split(" ")
     end = third_splits[0]
     end = find_between(end, "[", "]")
-    end = bpm_to_seconds(end, BPM)
+    end = bpm_to_seconds(end)
 
     length = get_clip_length(CLIP_DIRECTORY + "/" + path)
     if end < start:
